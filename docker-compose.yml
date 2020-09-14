@@ -1,0 +1,17 @@
+version: "3"
+services:
+ mymongodb:
+   image: mongo:latest
+   volumes:
+     - ./data:/data/db
+   container_name: mymongodb
+   ports:
+     - "27017:27017"
+ springboot-mongodb:
+   image: springboot-mongodb:1.0
+   restart: always
+   container_name: springboot-mongodb
+   ports:
+     - "8085:8085"
+   links:
+     - mymongodb 
