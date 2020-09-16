@@ -50,5 +50,5 @@
 		</plugins>
 		<finalName>springboot-mongodb</finalName>
 	</build>
-
+<packaging>war</packaging>
 </project>
