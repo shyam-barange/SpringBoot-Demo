@@ -22,7 +22,7 @@ public class EmployeeController {
 	@PostMapping("/addEmployee")
 	public String saveEmployee(@RequestBody Employee emp) {
 		empRepository.save(emp);
-		return "employee added successfully 2::"+emp.getId();
+		return "employee added successfully 3::"+emp.getId();
 		
 	}
 	
