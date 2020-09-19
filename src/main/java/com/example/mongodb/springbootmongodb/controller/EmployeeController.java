@@ -23,6 +23,12 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeRepository empRepository;
 	
+	
+	@GetMapping("/welcome/{name}")
+	public String welcome(@PathVariable("name") String name) {
+		return name+", Welcome to Xplorazzi..!!";
+	}
+	
 	@PostMapping("/addEmployee")
 	public String saveEmployee(@RequestBody Employee emp) {
 		empRepository.save(emp);
